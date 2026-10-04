@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Najwa Rahmadania Nurfadlilah 💕✨</title>
+    <meta name="description" content="Website ucapan selamat ulang tahun spesial & cute untuk Najwa Rahmadania Nurfadlilah pada tanggal 5 Oktober 2026. Filled with love, cute photos, and sweet memories.">
+    <meta name="theme-color" content="#ff75a0">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Pacifico&family=Quicksand:wght@400;500;600;700&family=Sacramento&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css?v=v2">
+</head>
+<body>
+
+    <!-- Dynamic Floating Background Elements -->
+    <div class="floating-bg" id="floatingBg"></div>
+    <div class="sparkles-container" id="sparklesContainer"></div>
+
+    <!-- Music Player Controller -->
+    <div class="music-player-btn" id="musicBtn" title="Putar Musik Ulang Tahun">
+        <i class="fas fa-music disc-icon"></i>
+        <span class="music-text">Play Sound 🎵</span>
+    </div>
+
+    <!-- Hidden Audio element for background music -->
+    <audio id="bgMusic" loop>
+        <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a82d09.mp3?filename=happy-birthday-to-you-cute-piano-10709.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Main Container -->
+    <div class="main-wrapper">
+
+        <!-- HEADER HERO SECTION -->
+        <header class="hero-section">
+            <div class="badge-cute">
+                <span>🎀 Special Birthday Celebration 🎀</span>
+            </div>
+            
+            <h1 class="main-title">
+                Happy Birthday, <br>
+                <span class="highlight-name">Najwa Rahmadania Nurfadlilah</span> 💕
+            </h1>
+            
+            <p class="subtitle">
+                Selamat Ulang Tahun untuk bidadari tercantik & paling lucu di dunia! ✨🌸<br>
+                <span class="date-tag"><i class="far fa-calendar-alt"></i> 5 Oktober 2026</span>
+            </p>
+
+            <!-- Countdown Box / Party Unlocked State -->
+            <div class="countdown-card glass-card" id="countdownCard">
+                <div class="card-header-cute">
+                    <i class="fas fa-hourglass-half clock-pulse"></i>
+                    <span>Menghitung Mundur Menuju Hari Spesial Najwa</span>
+                </div>
+                <div class="timer-grid" id="timerGrid">
+                    <div class="time-box">
+                        <span id="days">00</span>
+                        <small>Hari</small>
+                    </div>
+                    <div class="time-box">
+                        <span id="hours">00</span>
+                        <small>Jam</small>
+                    </div>
+                    <div class="time-box">
+                        <span id="minutes">00</span>
+                        <small>Menit</small>
+                    </div>
+                    <div class="time-box">
+                        <span id="seconds">00</span>
+                        <small>Detik</small>
+                    </div>
+                </div>
+                <div class="party-ready-message hidden" id="partyReadyMsg">
+                    🎉 HARI INI ADALAH HARI SPESIAL WAKTU UNTUK MERAYAKAN! 🎂✨
+                </div>
+                <button class="btn-cute btn-sparkle" id="celebrateNowBtn">
+                    <i class="fas fa-magic"></i> Tiup Lilin & Rayakan Sekarang! 🥳
+                </button>
+            </div>
+        </header>
+
+
+        <!-- SECTION 1: INTERACTIVE VIRTUAL CAKE & CANDLE BLOW -->
+        <section class="section-container" id="cakeSection">
+            <div class="section-title">
+                <h2>🎂 Kue Ulang Tahun Untuk Najwa 🎂</h2>
+                <p>Klik lilin untuk membuat harapan dan meniup nyala apinya! ✨</p>
+            </div>
+
+            <div class="cake-area">
+                <div class="cake-wrapper">
+                    <!-- Candles -->
+                    <div class="candles-container">
+                        <div class="candle" id="candle1" onclick="extinguishCandle('candle1')">
+                            <div class="flame"></div>
+                            <div class="spark"></div>
+                        </div>
+                        <div class="candle" id="candle2" onclick="extinguishCandle('candle2')">
+                            <div class="flame"></div>
+                            <div class="spark"></div>
+                        </div>
+                        <div class="candle" id="candle3" onclick="extinguishCandle('candle3')">
+                            <div class="flame"></div>
+                            <div class="spark"></div>
+                        </div>
+                    </div>
+
+                    <!-- Cake Layers -->
+                    <div class="cake">
+                        <div class="plate"></div>
+                        <div class="layer layer-bottom">
+                            <div class="icing"></div>
+                            <div class="drip drip1"></div>
+                            <div class="drip drip2"></div>
+                            <div class="drip drip3"></div>
+                            <div class="strawberry-decor s1">🍓</div>
+                            <div class="strawberry-decor s2">🍓</div>
+                            <div class="strawberry-decor s3">🍓</div>
+                        </div>
+                        <div class="layer layer-middle">
+                            <div class="icing"></div>
+                            <div class="cream-dots">
+                                <span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                        </div>
+                        <div class="layer layer-top">
+                            <div class="icing"></div>
+                            <div class="top-decorations">
+                                <span>💖</span><span>🍓</span><span>👑</span><span>🍓</span><span>💖</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cake-controls">
+                    <button class="btn-cute btn-pink" id="blowCandleBtn">
+                        <i class="fas fa-wind"></i> Tiup Semua Lilin 💨
+                    </button>
+                    <p class="wish-prompt" id="wishPrompt">
+                        <i class="fas fa-heart beat"></i> Jangan lupa baca doa & buat harapan terbaikmu ya sayang!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECTION 2: MOVING PHOTO GALLERY (FOTO-FOTO BERGERAK & CAROUSEL 3D) -->
+        <section class="section-container" id="photoGallerySection">
+            <div class="section-title">
+                <h2>📸 Galeri Kenangan Manis Najwa 📸</h2>
+                <p>Foto-foto cantik & menggemaskan yang bikin senyum-senyum sendiri! 💕</p>
+            </div>
+
+            <!-- Customizer / Upload controller bar -->
+            <div class="gallery-toolbar">
+                <button class="btn-mini-cute" id="openUploadModalBtn">
+                    <i class="fas fa-plus-circle"></i> Tambah / Ganti Foto Najwa
+                </button>
+                <div class="gallery-speed-ctrl">
+                    <span>Kecepatan Gerak:</span>
+                    <button class="speed-btn active" data-speed="normal">Normal</button>
+                    <button class="speed-btn" data-speed="fast">Cepat</button>
+                    <button class="speed-btn" data-speed="slow">Santai</button>
+                </div>
+            </div>
+
+            <!-- 3D Floating Infinite Moving Photo Track -->
+            <div class="moving-gallery-viewport">
+                <div class="moving-gallery-track" id="galleryTrack">
+                    <!-- Photo Card 1 -->
+                    <div class="polaroid-card" onclick="openPhotoModal(0)">
+                        <div class="pin">📌</div>
+                        <div class="polaroid-img-wrapper">
+                            <img src="images/najwa1_wisuda.jpg" alt="Princess Wisuda" class="polaroid-img">
+                            <div class="img-badge">✨ Cantik Banget</div>
+                        </div>
+                        <div class="polaroid-caption">
+                            <span class="caption-title">Princess Wisuda 🎓✨</span>
+                            <span class="caption-date">Momen Kebanggaan</span>
+                        </div>
+                        <div class="card-sticker">👑</div>
+                    </div>
+
+                    <!-- Photo Card 2 -->
+                    <div class="polaroid-card" onclick="openPhotoModal(1)">
+                        <div class="pin">📌</div>
+                        <div class="polaroid-img-wrapper">
+                            <img src="images/najwa2_bioskop.jpg" alt="Cinema Date" class="polaroid-img">
+                            <div class="img-badge">👩‍❤️‍👨 Mirror Selfie</div>
+                        </div>
+                        <div class="polaroid-caption">
+                            <span class="caption-title">Nonton Cinema Date 🎬🍿</span>
+                            <span class="caption-date">Date Time Favorit</span>
+                        </div>
+                        <div class="card-sticker">🍿</div>
+                    </div>
+
+                    <!-- Photo Card 3 -->
+                    <div class="polaroid-card" onclick="openPhotoModal(2)">
+                        <div class="pin">📌</div>
+                        <div class="polaroid-img-wrapper">
+                            <img src="images/najwa3_almamater.jpg" alt="Kelakuan Cute" class="polaroid-img">
+                            <div class="img-badge">🌸 Cutest Expression</div>
+                        </div>
+                        <div class="polaroid-caption">
+                            <span class="caption-title">Kelakuan Cute & Gemes 😚</span>
+                            <span class="caption-date">Kampus Life</span>
+                        </div>
+                        <div class="card-sticker">🎀</div>
+                    </div>
+
+                    <!-- Photo Card 4 -->
+                    <div class="polaroid-card" onclick="openPhotoModal(3)">
+                        <div class="pin">📌</div>
+                        <div class="polaroid-img-wrapper">
+                            <img src="images/najwa4_bunga.jpg" alt="Bunga Spesial" class="polaroid-img">
+                            <div class="img-badge">💖 Flowers for Princess</div>
+                        </div>
+                        <div class="polaroid-caption">
+                            <span class="caption-title">Bunga Spesial 🌹💐</span>
+                            <span class="caption-date">Romantic Day</span>
+                        </div>
+                        <div class="card-sticker">🌹</div>
+                    </div>
+
+                    <!-- Photo Card 5 -->
+                    <div class="polaroid-card" onclick="openPhotoModal(4)">
+                        <div class="pin">📌</div>
+                        <div class="polaroid-img-wrapper">
+                            <img src="images/najwa5_makan.jpg" alt="Snack Time" class="polaroid-img">
+                            <div class="img-badge">🍓 Foodie Queen</div>
+                        </div>
+                        <div class="polaroid-caption">
+                            <span class="caption-title">Kulineran & Snack Time 🧀😋</span>
+                            <span class="caption-date">Jajan Date</span>
+                        </div>
+                        <div class="card-sticker">🌭</div>
+                    </div>
+
+                    <!-- Duplicated Set for Smooth Infinite Loop -->
+                    <div class="polaroid-card" onclick="openPhotoModal(0)">
+                        <div class="pin">📌</div>
+                        <div class="polaroid-img-wrapper">
+                            <img src="images/najwa1_wisuda.jpg" alt="Princess Wisuda" class="polaroid-img">
+                            <div class="img-badge">✨ Cantik Banget</div>
+                        </div>
+                        <div class="polaroid-caption">
+                            <span class="caption-title">Princess Wisuda 🎓✨</span>
+                            <span class="caption-date">Momen Kebanggaan</span>
+                        </div>
+                        <div class="card-sticker">👑</div>
+                    </div>
+
+                    <div class="polaroid-card" onclick="openPhotoModal(1)">
+                        <div class="pin">📌</div>
+                        <div class="polaroid-img-wrapper">
+                            <img src="images/najwa2_bioskop.jpg" alt="Cinema Date" class="polaroid-img">
+                            <div class="img-badge">👩‍❤️‍👨 Mirror Selfie</div>
+                        </div>
+                        <div class="polaroid-caption">
+                            <span class="caption-title">Nonton Cinema Date 🎬🍿</span>
+                            <span class="caption-date">Date Time Favorit</span>
+                        </div>
+                        <div class="card-sticker">🍿</div>
+                    </div>
+
+                    <div class="polaroid-card" onclick="openPhotoModal(2)">
+                        <div class="pin">📌</div>
+                        <div class="polaroid-img-wrapper">
+                            <img src="images/najwa3_almamater.jpg" alt="Kelakuan Cute" class="polaroid-img">
+                            <div class="img-badge">🌸 Cutest Expression</div>
+                        </div>
+                        <div class="polaroid-caption">
+                            <span class="caption-title">Kelakuan Cute & Gemes 😚</span>
+                            <span class="caption-date">Kampus Life</span>
+                        </div>
+                        <div class="card-sticker">🎀</div>
+                    </div>
+
+                    <div class="polaroid-card" onclick="openPhotoModal(3)">
+                        <div class="pin">📌</div>
+                        <div class="polaroid-img-wrapper">
+                            <img src="images/najwa4_bunga.jpg" alt="Bunga Spesial" class="polaroid-img">
+                            <div class="img-badge">💖 Flowers for Princess</div>
+                        </div>
+                        <div class="polaroid-caption">
+                            <span class="caption-title">Bunga Spesial 🌹💐</span>
+                            <span class="caption-date">Romantic Day</span>
+                        </div>
+                        <div class="card-sticker">🌹</div>
+                    </div>
+
+                    <div class="polaroid-card" onclick="openPhotoModal(4)">
+                        <div class="pin">📌</div>
+                        <div class="polaroid-img-wrapper">
+                            <img src="images/najwa5_makan.jpg" alt="Snack Time" class="polaroid-img">
+                            <div class="img-badge">🍓 Foodie Queen</div>
+                        </div>
+                        <div class="polaroid-caption">
+                            <span class="caption-title">Kulineran & Snack Time 🧀😋</span>
+                            <span class="caption-date">Jajan Date</span>
+                        </div>
+                        <div class="card-sticker">🌭</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive 3D Slideshow Controls -->
+            <div class="carousel-navigation">
+                <button class="btn-circle-cute" id="prevSlideBtn"><i class="fas fa-chevron-left"></i></button>
+                <span class="slide-indicator" id="slideIndicator">Klik foto untuk perbesar & lihat pesan cute!</span>
+                <button class="btn-circle-cute" id="nextSlideBtn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+
+        <!-- SECTION 3: SECRET LOVE LETTER (SURAT UCAPAN SPESIAL) -->
+        <section class="section-container" id="letterSection">
+            <div class="section-title">
+                <h2>✉️ Surat Cinta & Ucapan Spesial Untuk Najwa ✉️</h2>
+                <p>Sentuh amplop berstempel hati ini untuk membuka pesan dari lubuk hati terdalam 💕</p>
+            </div>
+
+            <div class="envelope-wrapper">
+                <div class="envelope" id="envelopeBtn" onclick="openLetterModal()">
+                    <div class="envelope-back"></div>
+                    <div class="letter-paper-preview"></div>
+                    <div class="envelope-flap"></div>
+                    <div class="heart-seal">
+                        <i class="fas fa-heart"></i>
+                        <span>Buka Surat</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expanded Letter View -->
+            <div class="letter-modal-container hidden" id="letterModal" onclick="closeLetterModal(event)">
+                <div class="letter-content-box glass-card" onclick="event.stopPropagation()">
+                    <button class="close-letter-btn" id="closeLetterBtn" onclick="closeLetterModal(event)" title="Tutup Surat"><i class="fas fa-times" style="pointer-events: none;"></i></button>
+                    
+                    <div class="letter-header">
+                        <div class="cute-stamp">
+                            <i class="fas fa-stamp"></i>
+                            <span>5 OKT 2026</span>
+                        </div>
+                        <h3>Untuk Sayangku,<br><span class="recipient-name">Najwa Rahmadania Nurfadlilah</span> 💖</h3>
+                    </div>
+
+                    <div class="letter-body">
+                        <div class="typewriter-text" id="typewriterText">
+                            <!-- Populated via script for typewriter magic -->
+                        </div>
+                    </div>
+
+                    <div class="letter-footer">
+                        <p class="love-sign">Dengan Seluruh Cinta & Kasih Sayang,<br><strong>Pacarmu yang Selalu Ada Untukmu 🥰</strong></p>
+                        <button class="btn-cute btn-pink" onclick="triggerLoveShower()">
+                            <i class="fas fa-heart-circle-bolt"></i> Kirim 1000 Pelukan & Cinta 💕
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECTION 4: REASONS WHY I LOVE NAJWA (ALASAN KENAPA NAJWA BEGITU SPESIAL) -->
+        <section class="section-container" id="reasonsSection">
+            <div class="section-title">
+                <h2>✨ Kenapa Najwa Begitu Spesial? ✨</h2>
+                <p>Beberapa hal kecil dari Najwa yang selalu berhasil bikin jatuh cinta setiap hari 💕</p>
+            </div>
+
+            <div class="reasons-grid">
+                <div class="reason-card glass-card">
+                    <div class="reason-icon">🥰</div>
+                    <h3>Senyumannya Super Sweet</h3>
+                    <p>Setiap kali Najwa tersenyum, rasanya seluruh dunia ikut jadi cerah dan bahagia!</p>
+                </div>
+                <div class="reason-card glass-card">
+                    <div class="reason-icon">🌸</div>
+                    <h3>Hatinya Yang Sangat Baik</h3>
+                    <p>Najwa selalu perhatian, lembut, dan punya empati tinggi yang bikin siapapun merasa nyaman.</p>
+                </div>
+                <div class="reason-card glass-card">
+                    <div class="reason-icon">🍓</div>
+                    <h3>Tingkah Cute & Gemasnya</h3>
+                    <p>Kelakuan lucu dan manjanya Najwa tuh bener-bener gak ada tandingannya, selalu bikin gemes!</p>
+                </div>
+                <div class="reason-card glass-card">
+                    <div class="reason-icon">👑</div>
+                    <h3>Pendengar & Penguat Terbaik</h3>
+                    <p>Selalu ada di saat senang maupun sedih, jadi rumah tempat pulang yang paling menenangkan.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECTION 6: WISH LANTERN & MESSAGE BOARD 🌌 -->
+        <section class="section-container" id="wishLanternSection">
+            <div class="section-title">
+                <h2>🏮 Kertas Harapan & Doa Ulang Tahun 🏮</h2>
+                <p>Tuliskan doa & impian terbesarmu di sini, lalu terbangkan lampion ke langit bintang! ✨</p>
+            </div>
+
+            <div class="wish-board-card glass-card">
+                <div class="wish-input-group">
+                    <label for="userWishInput"><i class="fas fa-pen-nib"></i> Harapan Najwa di umur yang baru ini:</label>
+                    <textarea id="userWishInput" placeholder="Tulis harapan manis atau impianmu di sini (contoh: Semoga selalu sehat, makin sayang satu sama lain, dan makin sukses!)..."></textarea>
+                    <button class="btn-cute btn-purple" id="sendWishBtn" onclick="launchWishLantern()">
+                        <i class="fas fa-paper-plane"></i> Terbangkan Lampion Harapan 🌌✨
+                    </button>
+                </div>
+
+                <!-- Active Flying Lanterns List -->
+                <div class="flying-lanterns-display" id="lanternsList">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="cute-footer">
+            <div class="footer-decor">🌸 ✨ 💖 🍓 🎀</div>
+            <p class="footer-text">
+                Dibuat khusus dengan penuh cinta untuk <strong>Najwa Rahmadania Nurfadlilah</strong> 💕<br>
+                Happy Birthday 5 Oktober 2026! May all your dreams come true ✨
+            </p>
+        </footer>
+
+    </div>
+
+
+    <!-- PHOTO DETAIL LIGHTBOX MODAL -->
+    <div class="modal-overlay hidden" id="photoModalOverlay">
+        <div class="modal-card glass-card">
+            <button class="modal-close" onclick="closePhotoModal()">&times;</button>
+            <div class="modal-img-container">
+                <img src="" id="modalImg" alt="Detail Foto Najwa">
+            </div>
+            <div class="modal-text-content">
+                <h3 id="modalTitle">Judul Foto</h3>
+                <p id="modalDesc">Deskripsi manis dari foto ini...</p>
+                <div class="modal-decor">✨ 💖 🌸</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- PHOTO UPLOAD & CUSTOMIZATION MODAL -->
+    <div class="modal-overlay hidden" id="uploadModalOverlay">
+        <div class="modal-card glass-card upload-modal">
+            <button class="modal-close" onclick="closeUploadModal()">&times;</button>
+            <h3><i class="fas fa-images"></i> Custom Foto Najwa</h3>
+            <p>Masukkan URL foto atau upload foto terbaik Najwa untuk ditampilkan di galeri bergerak!</p>
+            
+            <div class="upload-form">
+                <div class="form-group">
+                    <label>Pilih Slot Foto (1 - 5):</label>
+                    <select id="slotSelect">
+                        <option value="0">Slot 1 - Senyuman Terindah</option>
+                        <option value="1">Slot 2 - Princess Vibe</option>
+                        <option value="2">Slot 3 - Tawa Yang Bikin Bahagia</option>
+                        <option value="3">Slot 4 - Tatapan Manismu</option>
+                        <option value="4">Slot 5 - Momen Spesial Bersama</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Masukkan Link Foto (URL):</label>
+                    <input type="text" id="photoUrlInput" placeholder="https://..." value="">
+                </div>
+
+                <div class="form-group">
+                    <label>Atau Upload Dari Perangkat:</label>
+                    <input type="file" id="photoFileInput" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label>Judul / Caption Foto:</label>
+                    <input type="text" id="photoCaptionInput" placeholder="Contoh: Senyuman Favoritku">
+                </div>
+
+                <button class="btn-cute btn-pink" onclick="saveCustomPhoto()">
+                    <i class="fas fa-save"></i> Simpan & Update Galeri 📸
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js?v=v2"></script>
+</body>
+</html>
